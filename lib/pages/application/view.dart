@@ -1,4 +1,9 @@
 import 'package:doubanjiang_getx/common/values/values.dart';
+import 'package:doubanjiang_getx/pages/book_video_music/index.dart';
+import 'package:doubanjiang_getx/pages/fair/index.dart';
+import 'package:doubanjiang_getx/pages/group/index.dart';
+import 'package:doubanjiang_getx/pages/home/index.dart';
+import 'package:doubanjiang_getx/pages/profile/index.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,10 +23,11 @@ class _ApplicationPageState extends State<ApplicationPage>
     return PageView(
       physics: NeverScrollableScrollPhysics(),
       children: <Widget>[
-        Text('mainPage'),
-        Text('CategoryPage'),
-        Text('BookmarksPage'),
-        Text('AccountPage'),
+        HomePage(),
+        BookVideoMusicPage(),
+        GroupPage(),
+        FairPage(),
+        ProfilePage(),
       ],
       controller: controller.pageController,
       onPageChanged: controller.handlePageChanged,
